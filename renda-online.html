@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Renda Online do Zero | NexusLearn</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #05070d;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid #111827;
+            background: rgba(5, 7, 13, 0.96);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #b8c0cc;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            color: white;
+            background: rgba(0, 140, 255, 0.12);
+        }
+
+        .hero {
+            min-height: 88vh;
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 20%, rgba(0, 140, 255, 0.18), transparent 45%),
+                radial-gradient(circle at 50% 100%, rgba(0, 60, 150, 0.12), transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 40px rgba(0, 140, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #008cff;
+            text-shadow: 0 0 20px rgba(0, 140, 255, 0.5);
+        }
+
+        .hero p {
+            color: #b8c0cc;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 34px;
+            font-weight: bold;
+            color: #008cff;
+            margin: 20px 0 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 28px;
+            background: linear-gradient(135deg, #008cff, #0066ff);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 140, 255, 0.35);
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 30px rgba(0, 140, 255, 0.65);
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .section h2 {
+            color: #008cff;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        .section > p {
+            color: #b8c0cc;
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            background: linear-gradient(145deg, #0b1020, #080d19);
+            border: 1px solid #162d5c;
+            border-radius: 16px;
+            padding: 25px;
+            transition: 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            border-color: #008cff;
+            box-shadow: 0 0 25px rgba(0, 140, 255, 0.18);
+        }
+
+        .box h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .box p,
+        .box li {
+            color: #b8c0cc;
+        }
+
+        .box ul {
+            padding-left: 20px;
+        }
+
+        .box li {
+            margin-bottom: 10px;
+        }
+
+        .payment {
+            text-align: center;
+            background: #0b1020;
+            border: 1px solid #008cff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 0 25px rgba(0, 140, 255, 0.12);
+        }
+
+        .payment h3 {
+            color: #008cff;
+            margin-bottom: 18px;
+        }
+
+        .payment p {
+            color: #b8c0cc;
+            margin: 8px 0;
+        }
+
+        .final {
+            text-align: center;
+            padding: 70px 20px;
+            background: radial-gradient(
+                circle,
+                rgba(0, 140, 255, 0.13),
+                transparent 55%
+            );
+        }
+
+        .final h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .final p {
+            color: #b8c0cc;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #111827;
+            color: #777;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            z-index: 9999;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                padding: 12px 15px;
+            }
+
+            nav {
+                gap: 8px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 55px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img
+        src="file_0000000055c48208b7e86a165e3855cb (1).png"
+        alt="NexusLearn"
+    >
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#quiz">Quiz</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#faq">FAQ</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <img
+            src="imagens/renda-online.jpg"
+            alt="Renda Online do Zero"
+        >
+
+        <h1>
+            Renda Online <span>do Zero</span>
+        </h1>
+
+        <p>
+            Aprende os primeiros passos para começar a gerar
+            oportunidades de renda online, mesmo sem experiência.
+        </p>
+
+        <div class="price">299 MT</div>
+
+        <a
+            href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20o%20curso%20Renda%20Online%20do%20Zero."
+            class="btn"
+        >
+            Comprar pelo WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>O que vais aprender?</h2>
+
+    <div class="grid">
+
+        <div class="box">
+            <h3>🌐 O mundo da renda online</h3>
+            <p>
+                Entende como funcionam as oportunidades de trabalho
+                e geração de renda através da internet.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>💡 Encontra oportunidades</h3>
+            <p>
+                Aprende a identificar formas de começar online
+                usando as habilidades e ferramentas que tens.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>📱 Começa pelo celular</h3>
+            <p>
+                Descobre como usar o teu celular para aprender,
+                criar conteúdo e procurar oportunidades.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>🎯 Encontra clientes</h3>
+            <p>
+                Aprende princípios básicos para apresentar
+                os teus serviços e iniciar conversas com potenciais clientes.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>📣 Divulga o teu trabalho</h3>
+            <p>
+                Aprende formas simples de apresentar aquilo
+                que sabes fazer no ambiente digital.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>🚀 Dá o primeiro passo</h3>
+            <p>
+                Sai da teoria e começa a aplicar conhecimentos
+                para construir as tuas primeiras oportunidades online.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Para quem é este curso?</h2>
+
+    <div class="box">
+
+        <ul>
+            <li>Para quem nunca trabalhou online.</li>
+            <li>Para quem quer começar usando o celular.</li>
+            <li>Para quem quer descobrir oportunidades digitais.</li>
+            <li>Para quem quer aprender de forma simples e prática.</li>
+            <li>Para quem quer dar os primeiros passos na renda online.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>💳 Como comprar?</h2>
+
+    <div class="payment">
+
+        <h3>Métodos de pagamento</h3>
+
+        <p><strong>M-Pesa:</strong> 852319919</p>
+
+        <p><strong>E-Mola:</strong> 868002900</p>
+
+        <br>
+
+        <p>
+            1️⃣ Faz o pagamento de <strong>299 MT</strong>.
+        </p>
+
+        <p>
+            2️⃣ Envia o comprovativo pelo WhatsApp.
+        </p>
+
+        <p>
+            3️⃣ Depois da confirmação, recebe o teu curso.
+        </p>
+
+        <br>
+
+        <a
+            href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20o%20curso%20Renda%20Online%20do%20Zero."
+            class="btn"
+        >
+            Quero comprar
+        </a>
+
+    </div>
+
+</section>
+
+<section class="final">
+
+    <h2>Começa a construir a tua renda online.</h2>
+
+    <p>
+        APRENDE • EVOLUI • CONQUISTA
+    </p>
+
+    <a
+        href="https://wa.me/258868002900?text=Olá!%20Quero%20o%20curso%20Renda%20Online%20do%20Zero."
+        class="btn"
+    >
+        Começar agora
+    </a>
+
+</section>
+
+<footer>
+
+    <p>APRENDE • EVOLUI • CONQUISTA</p>
+
+    <p>© 2026 NexusLearn</p>
+
+</footer>
+
+<a
+    href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20saber%20mais."
+    class="whatsapp-float"
+>
+    WhatsApp
+</a>
+
+</body>
+</html>

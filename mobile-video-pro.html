@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile Video Pro | NexusLearn</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #05070d;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid #111827;
+            position: sticky;
+            top: 0;
+            background: rgba(5, 7, 13, 0.95);
+            z-index: 1000;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #b8c0cc;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            color: white;
+            background: rgba(0, 140, 255, 0.12);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background:
+                radial-gradient(circle at top, rgba(0, 123, 255, 0.18), transparent 45%);
+        }
+
+        .hero img {
+            width: 280px;
+            max-width: 90%;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 35px rgba(0, 140, 255, 0.25);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .hero h1 span {
+            color: #008cff;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #b8c0cc;
+            font-size: 18px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #008cff;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            background: #008cff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 0 18px rgba(0, 140, 255, 0.35);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #006dcc;
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #008cff;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #0b1020;
+            border: 1px solid #1d4ed8;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+        }
+
+        .card h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #b8c0cc;
+        }
+
+        .payment {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            background: #0b1020;
+            border: 1px solid #008cff;
+            border-radius: 15px;
+        }
+
+        .payment p {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #111827;
+            color: #777;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            z-index: 9999;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                gap: 8px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="file_0000000055c48208b7e86a165e3855cb (1).png"
+         alt="NexusLearn">
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#quiz">Quiz</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#sobre">Sobre</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <img src="imagens/mobile-video-pro.jpg"
+         alt="Mobile Video Pro">
+
+    <h1>
+        Mobile <span>Video Pro</span>
+    </h1>
+
+    <p>
+        Aprende a editar vídeos profissionais diretamente
+        pelo teu celular e transforma o teu conteúdo.
+    </p>
+
+    <div class="price">
+        299 MT
+    </div>
+
+    <a href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20o%20curso%20Mobile%20Video%20Pro."
+       class="btn">
+        Comprar pelo WhatsApp
+    </a>
+
+</section>
+
+
+<section class="section">
+
+    <h2>O que vais aprender?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🎬 Edição pelo celular</h3>
+            <p>
+                Aprende os fundamentos da edição usando
+                ferramentas acessíveis no teu celular.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✂️ Cortes profissionais</h3>
+            <p>
+                Aprende a cortar, organizar e montar vídeos
+                de forma mais dinâmica.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✨ Efeitos e transições</h3>
+            <p>
+                Descobre como utilizar efeitos e transições
+                para deixar os teus vídeos mais interessantes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Conteúdo para redes sociais</h3>
+            <p>
+                Aprende a preparar vídeos para plataformas
+                como TikTok, Instagram e outras redes.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2>Como comprar?</h2>
+
+    <div class="payment">
+
+        <p>1️⃣ Clica em <strong>Comprar pelo WhatsApp</strong>.</p>
+
+        <p>2️⃣ Faz o pagamento por M-Pesa ou E-Mola.</p>
+
+        <p>3️⃣ Envia o comprovativo pelo WhatsApp.</p>
+
+        <p>4️⃣ Após a confirmação, recebe o teu material.</p>
+
+        <br>
+
+        <p><strong>M-Pesa:</strong> 852319919</p>
+
+        <p><strong>E-Mola:</strong> 868002900</p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>APRENDE • EVOLUI • CONQUISTA</p>
+
+    <p>© 2026 NexusLearn</p>
+
+</footer>
+
+
+<a href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20saber%20mais%20sobre%20o%20Mobile%20Video%20Pro."
+   class="whatsapp-float">
+    WhatsApp
+</a>
+
+</body>
+</html>

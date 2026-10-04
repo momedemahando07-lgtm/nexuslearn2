@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seu Primeiro Produto Digital | NexusLearn</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #05070d;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid #111827;
+            background: rgba(5, 7, 13, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #b8c0cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #008cff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 50px;
+            background:
+                radial-gradient(circle at top, rgba(0, 140, 255, 0.15), transparent 45%);
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(0, 140, 255, 0.25);
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: #008cff;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #c5cad3;
+            font-size: 18px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            background: #008cff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 0 18px rgba(0, 140, 255, 0.35);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #006dcc;
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 55px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .section h2 {
+            color: #008cff;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .section p {
+            color: #c5cad3;
+            margin-bottom: 15px;
+        }
+
+        .box {
+            background: #0b1020;
+            border: 1px solid #1d4ed8;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .box h3 {
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .box ul {
+            padding-left: 20px;
+            color: #c5cad3;
+        }
+
+        .box li {
+            margin-bottom: 10px;
+        }
+
+        .payment {
+            text-align: center;
+            background: #0b1020;
+            border: 1px solid #008cff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .payment h3 {
+            color: #008cff;
+            margin-bottom: 15px;
+        }
+
+        .payment p {
+            margin: 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #111827;
+            color: #777;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            z-index: 9999;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="file_0000000055c48208b7e86a165e3855cb (1).png" alt="NexusLearn">
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#quiz">Quiz</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#sobre">Sobre</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <img src="imagens/primeiro-produto-digital.jpg"
+         alt="Seu Primeiro Produto Digital">
+
+    <h1>Seu Primeiro Produto Digital</h1>
+
+    <p>
+        Aprende como transformar uma ideia em um produto digital,
+        preparar o conteúdo e começar a vender pela internet.
+    </p>
+
+    <div class="price">149 MT</div>
+
+    <a href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20o%20e-book%20Seu%20Primeiro%20Produto%20Digital."
+       class="btn">
+        Comprar pelo WhatsApp
+    </a>
+
+</section>
+
+<section class="section">
+
+    <h2>O que vais aprender?</h2>
+
+    <div class="box">
+
+        <h3>💡 Encontra uma boa ideia</h3>
+
+        <ul>
+            <li>Como escolher uma ideia para o teu produto.</li>
+            <li>Como identificar problemas que podes resolver.</li>
+            <li>Como pensar no público certo.</li>
+            <li>Como transformar conhecimento em conteúdo.</li>
+        </ul>
+
+    </div>
+
+    <div class="box">
+
+        <h3>📦 Cria o teu produto</h3>
+
+        <ul>
+            <li>Como organizar o conteúdo.</li>
+            <li>Como criar um produto simples e útil.</li>
+            <li>Como preparar o material para os clientes.</li>
+            <li>Como melhorar o valor da tua oferta.</li>
+        </ul>
+
+    </div>
+
+    <div class="box">
+
+        <h3>💰 Começa a vender</h3>
+
+        <p>
+            Aprende os primeiros passos para apresentar,
+            divulgar e vender o teu produto digital online.
+        </p>
+
+    </div>
+
+    <div class="payment">
+
+        <h3>💳 Como comprar</h3>
+
+        <p><strong>M-Pesa:</strong> 852319919</p>
+
+        <p><strong>E-Mola:</strong> 868002900</p>
+
+        <p>
+            Depois do pagamento, envia o comprovativo
+            pelo WhatsApp para receber o teu material.
+        </p>
+
+        <br>
+
+        <a href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20o%20e-book%20Seu%20Primeiro%20Produto%20Digital."
+           class="btn">
+            Enviar comprovativo
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>APRENDE • EVOLUI • CONQUISTA</p>
+
+    <p>© 2026 NexusLearn</p>
+
+</footer>
+
+<a href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20saber%20mais."
+   class="whatsapp-float">
+    WhatsApp
+</a>
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mega Pack — Renda Digital | NexusLearn</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #05070d;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid #111827;
+            background: rgba(5, 7, 13, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #b8c0cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #008cff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 55px;
+            background:
+                radial-gradient(circle at top, rgba(0, 140, 255, 0.20), transparent 50%);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 15px;
+            background: #008cff;
+            color: white;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            box-shadow: 0 0 18px rgba(0, 140, 255, 0.4);
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 430px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 40px rgba(0, 140, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #008cff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 25px rgba(0, 140, 255, 0.45);
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+            color: #c5cad3;
+            font-size: 18px;
+        }
+
+        .old-price {
+            color: #777;
+            font-size: 20px;
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            font-size: 38px;
+            font-weight: bold;
+            color: #008cff;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 28px;
+            background: #008cff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 0 22px rgba(0, 140, 255, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #006dcc;
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(0, 140, 255, 0.65);
+        }
+
+        .section {
+            padding: 55px 20px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .section h2 {
+            color: #008cff;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .section > p {
+            color: #c5cad3;
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .box {
+            background: #0b1020;
+            border: 1px solid #1d4ed8;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .box h3 {
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .box p {
+            color: #c5cad3;
+        }
+
+        .box ul {
+            padding-left: 20px;
+            color: #c5cad3;
+        }
+
+        .box li {
+            margin-bottom: 9px;
+        }
+
+        .highlight {
+            border: 2px solid #008cff;
+            box-shadow: 0 0 30px rgba(0, 140, 255, 0.18);
+        }
+
+        .payment {
+            text-align: center;
+            background: #0b1020;
+            border: 1px solid #008cff;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 35px;
+        }
+
+        .payment h3 {
+            color: #008cff;
+            margin-bottom: 15px;
+        }
+
+        .payment p {
+            color: #c5cad3;
+            margin: 8px 0;
+        }
+
+        .final-cta {
+            text-align: center;
+            padding: 60px 20px;
+            background:
+                radial-gradient(circle, rgba(0, 140, 255, 0.12), transparent 55%);
+        }
+
+        .final-cta h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .final-cta p {
+            color: #c5cad3;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #111827;
+            color: #777;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            z-index: 9999;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="file_0000000055c48208b7e86a165e3855cb (1).png"
+         alt="NexusLearn">
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#quiz">Quiz</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#faq">FAQ</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <span class="badge">🔥 MAIS VENDIDO</span>
+
+    <br>
+
+    <img src="imagens/mega-pack.jpg"
+         alt="Mega Pack — Renda Digital">
+
+    <h1>Mega Pack — Renda Digital</h1>
+
+    <p>
+        O pacote completo para aprender habilidades digitais,
+        criar produtos, trabalhar online e começar a construir
+        novas oportunidades de renda.
+    </p>
+
+    <div class="old-price">1.820 MT</div>
+
+    <div class="price">399 MT</div>
+
+    <a href="https://wa.me/258868002900?text=Olá!%20Quero%20o%20Mega%20Pack%20—%20Renda%20Digital."
+       class="btn">
+        Quero o Mega Pack
+    </a>
+
+</section>
+
+<section class="section">
+
+    <h2>O que está incluído?</h2>
+
+    <p>
+        Um pacote completo com materiais para começares
+        a desenvolver habilidades digitais e explorar
+        oportunidades de renda online.
+    </p>
+
+    <div class="grid">
+
+        <div class="box highlight">
+            <h3>🎓 5 Cursos</h3>
+
+            <ul>
+                <li>Renda Online do Zero</li>
+                <li>IA Money Lab</li>
+                <li>Mobile Video Pro</li>
+                <li>Social Media Pro</li>
+                <li>Digital Product Master</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>📚 5 E-books</h3>
+
+            <ul>
+                <li>Renda Online do Zero</li>
+                <li>100 Formas de Usar IA para Ganhar Dinheiro</li>
+                <li>O Guia do WhatsApp que Vende</li>
+                <li>Do Celular ao Primeiro Cliente</li>
+                <li>Seu Primeiro Produto Digital</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>🎨 Templates Canva</h3>
+
+            <p>
+                Modelos para ajudar na criação de conteúdos
+                e materiais digitais.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>🤖 200 Prompts de IA</h3>
+
+            <p>
+                Prompts para facilitar criação de conteúdo,
+                produtividade e tarefas digitais.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>💡 100 Ideias de Conteúdo</h3>
+
+            <p>
+                Ideias para ajudar-te a manter uma presença
+                ativa nas redes sociais.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>💼 Kit Freelancer</h3>
+
+            <p>
+                Materiais para começar a apresentar
+                e oferecer serviços online.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>💬 50 Mensagens para Clientes</h3>
+
+            <p>
+                Mensagens prontas para iniciar conversas
+                e apresentar os teus serviços.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>📊 Planilha Financeira</h3>
+
+            <p>
+                Uma ferramenta para ajudar na organização
+                das tuas finanças.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>🚀 Desafio de 30 Dias</h3>
+
+            <p>
+                Um desafio para manter consistência
+                enquanto desenvolves as tuas habilidades.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>🎯 Guia do Primeiro Cliente</h3>
+
+            <p>
+                Orientações para começares a procurar
+                e conquistar o teu primeiro cliente.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Para quem é este Mega Pack?</h2>
+
+    <div class="grid">
+
+        <div class="box">
+            <h3>📱 Para iniciantes</h3>
+            <p>
+                Para quem quer começar no mundo digital
+                mesmo sem experiência.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>💰 Para quem procura renda online</h3>
+            <p>
+                Para quem quer aprender diferentes caminhos
+                para criar oportunidades pela internet.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>🚀 Para quem quer aprender várias habilidades</h3>
+            <p>
+                Um único pacote reúne diferentes áreas
+                do universo digital.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>💳 Como comprar?</h2>
+
+    <div class="payment">
+
+        <h3>Métodos de pagamento</h3>
+
+        <p><strong>M-Pesa:</strong> 852319919</p>
+
+        <p><strong>E-Mola:</strong> 868002900</p>
+
+        <br>
+
+        <p>
+            1️⃣ Faz o pagamento de 399 MT.
+        </p>
+
+        <p>
+            2️⃣ Envia o comprovativo pelo WhatsApp.
+        </p>
+
+        <p>
+            3️⃣ Depois da confirmação, recebe o teu material.
+        </p>
+
+        <br>
+
+        <a href="https://wa.me/258868002900?text=Olá!%20Quero%20o%20Mega%20Pack%20—%20Renda%20Digital."
+           class="btn">
+            Comprar pelo WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+<section class="final-cta">
+
+    <h2>O teu futuro digital começa aqui.</h2>
+
+    <p>
+        Aprende. Evolui. Conquista.
+    </p>
+
+    <a href="https://wa.me/258868002900?text=Olá!%20Quero%20o%20Mega%20Pack%20—%20Renda%20Digital."
+       class="btn">
+        Quero começar agora
+    </a>
+
+</section>
+
+<footer>
+
+    <p>APRENDE • EVOLUI • CONQUISTA</p>
+
+    <p>© 2026 NexusLearn</p>
+
+</footer>
+
+<a href="https://wa.me/258868002900?text=Olá!%20Vim%20pelo%20site%20da%20NexusLearn%20e%20quero%20saber%20mais."
+   class="whatsapp-float">
+    WhatsApp
+</a>
+
+</body>
+</html>
